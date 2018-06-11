@@ -7,7 +7,7 @@ public class Contactos {
     String correo1,correo2,correo3;
     String sonidoLlamada,sonidoMsj,sonidoCorreo,sonidoSilencio;
     String direccionCasa,direccionTrabajo;
-    String lugarTrabajo,lugarEstudio;
+    String lugarEstudio;
     String notas;
     String familia;
     String Profesion;
@@ -139,14 +139,6 @@ public class Contactos {
 
     public void setDireccionTrabajo(String direccionTrabajo) {
         this.direccionTrabajo = direccionTrabajo;
-    }
-
-    public String getLugarTrabajo() {
-        return lugarTrabajo;
-    }
-
-    public void setLugarTrabajo(String lugarTrabajo) {
-        this.lugarTrabajo = lugarTrabajo;
     }
 
     public String getLugarEstudio() {
