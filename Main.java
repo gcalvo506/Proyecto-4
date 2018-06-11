@@ -3,6 +3,7 @@ package com.company;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import sun.font.TrueTypeFont;
 
+import javax.swing.*;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
@@ -11,8 +12,16 @@ import java.io.InputStreamReader;
 public class Main {
     static Contactos contacto= new Contactos();
 
+    public static void main(String[] args){
+        JFrame frameprincipal= new JFrame("Libro Contactos");
+        frameprincipal.setContentPane(new Libro_contactos().panel1);
+        frameprincipal.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameprincipal.pack();
+        frameprincipal.setVisible(true);
+    }
 
-    public static void main(String[] args) throws IOException {
+
+    public static void Objeto_Nuevo(String[] args) throws IOException {
 	System.out.print("Escriba su nombre");
 	BufferedReader buffer=new BufferedReader(new InputStreamReader(System.in));
 	contacto.Nombre_de_Contacto=buffer.readLine();
@@ -27,7 +36,6 @@ public class Main {
 	correo3get();
 	direccioncasaget();
 	direcciontrabajoget();
-	lugartrabajoget();
 	lugarestudioget();
 	familiaget();
 	profesionget();
@@ -135,12 +143,6 @@ public class Main {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         contacto.direccionTrabajo = buffer.readLine();
         System.out.print(contacto.direccionTrabajo);
-    }
-    public static void lugartrabajoget() throws IOException {
-        System.out.print("Escriba su lugar de trabajo");
-        BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
-        contacto.lugarTrabajo = buffer.readLine();
-        System.out.print(contacto.lugarTrabajo);
     }
     public static void lugarestudioget() throws IOException {
         System.out.print("Escriba su lugar de estudio");
